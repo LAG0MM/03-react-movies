@@ -7,7 +7,7 @@ const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN
 
 interface MovieResponse  {
     page: number;
-    result: Movie[];
+    results: Movie[];
     total_pages: number;
     total_results: number;
 }
@@ -25,5 +25,5 @@ export default async function getMovies(query: string): Promise<Movie[]> {
     }
     const response = await axios.get<MovieResponse>(URL, options)
 
-    return response.data.result;
+    return response.data.results;
 }
