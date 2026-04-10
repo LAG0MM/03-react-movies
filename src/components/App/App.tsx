@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import type { Movie } from '../../types/movie';
 
 import SearchBar from '../SearchBar/SearchBar';
-import getMovies from '../../services/MovieService';
+import getMovies from '../../services/movieService';
 import MovieGrid from '../MovieGrid/MovieGrid';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -54,6 +54,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
